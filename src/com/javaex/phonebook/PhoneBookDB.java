@@ -81,9 +81,21 @@ public class PhoneBookDB {
 				break;
 
 			case 4:
-
+			
+				sc.nextLine();
+				System.out.println("<4.검색>");
+				System.out.println(">이름: ");
+				String word=sc.nextLine();
+				for(int i =0; i<PhoneBookList.size();i++) {
+					PhoneBook p = PhoneBookList.get(i);
+					if(p.getName().contains(word)) {
+						System.out.println("이름: " +p.getName());
+						System.out.println("연락처: "+p.getHp());
+						System.out.println("회사: "+p.getCompany());
+					}
+				}
 				break;
-
+				
 			case 5:
 	
 
@@ -94,7 +106,7 @@ public class PhoneBookDB {
 				break;
 				
 				default:
-					System.out.println("잘못 입력하셨습니다. ㅋㅋㅋㅋ바보");
+					System.out.println("잘못 입력하셨습니다.");
 					break;
 
 			}
